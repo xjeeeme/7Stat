@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7Stat — Трекер веса и питания</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" id="nav-home">Главная</a></li>
+        <li><a href="#" id="nav-stats">Статистика</a></li>
+        <li><a href="#" id="nav-weight">Вес</a></li>
+      </ul>
+      <div id="datetime-weather">
+        <span id="datetime"></span>
+        <span id="weather"></span>
+      </div>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home-section">
+      <div id="weight-input-container">
+        <input type="number" id="weight-input" placeholder="Введите сегодняшний вес (кг)" />
+        <button id="save-weight">Сохранить вес</button>
+      </div>
+
+      <div id="food-input-container">
+        <input type="text" id="food-name" placeholder="Название продукта" />
+        <input type="number" id="calories" placeholder="Калории" />
+        <input type="number" id="protein" placeholder="Белки (г)" />
+        <input type="number" id="fat" placeholder="Жиры (г)" />
+        <input type="number" id="carbs" placeholder="Углеводы (г)" />
+        <button id="add-food">Добавить продукт</button>
+      </div>
+
+      <div id="food-list-container">
+        <ul id="food-list"></ul>
+        <div id="total-calories"></div>
+      </div>
+    </section>
+
+    <section id="stats-section" class="hidden">
+      <table id="stats-table">
+        <thead>
+          <tr>
+            <th>Дата</th>
+            <th>Калории</th>
+            <th>Вес (кг)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="weight-section" class="hidden">
+      <canvas id="weight-chart"></canvas>
+      <div id="goal-container">
+        <input type="number" id="current-weight" placeholder="Текущий вес (кг)" />
+        <input type="number" id="goal-weight" placeholder="Целевой вес (кг)" />
+        <button id="set-goal">Установить цель</button>
+        <div id="weight-difference"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
