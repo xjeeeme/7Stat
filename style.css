@@ -1,0 +1,113 @@
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --accent-color: #007aff;
+  --container-bg: #fff;
+}
+
+body.dark {
+  --bg-color: #1c1c1e;
+  --text-color: #f0f0f0;
+  --accent-color: #0a84ff;
+  --container-bg: #2c2c2e;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--container-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+#datetime-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+input, button {
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#food-list {
+  list-style: none;
+  padding: 0;
+}
+
+#food-list li {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--container-bg);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+#stats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#stats-table th, #stats-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#goal-container {
+  margin-top: 1rem;
+}
